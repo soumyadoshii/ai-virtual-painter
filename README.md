@@ -108,4 +108,3 @@ genai.configure(api_key="YOUR_ACTUAL_API_KEY")
 
 -----
 
-Would you like me to help you draft a `.gitignore` file so those `__pycache__` folders don't clutter your GitHub?
