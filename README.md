@@ -1,7 +1,3 @@
-This version elevates the professional tone, adds visual structure with badges, and emphasizes the technical sophistication of the project. It also incorporates a more secure way to handle your Gemini API key, which is a standard practice for the AI projects you're building.
-
------
-
 # 🎨 AI Virtual Painter: The Pictionary of the Future
 
 [](https://www.python.org/)
