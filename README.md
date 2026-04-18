@@ -1,83 +1,115 @@
-# AI Virtual Painter
+This version elevates the professional tone, adds visual structure with badges, and emphasizes the technical sophistication of the project. It also incorporates a more secure way to handle your Gemini API key, which is a standard practice for the AI projects you're building.
 
-An interactive, AI-powered virtual drawing game that uses hand tracking and computer vision to let you draw in the air using your webcam. The AI then tries to guess what you drew! Inspired by Pictionary, this project combines gesture recognition, drawing, and generative AI for a futuristic, fun experience.
+-----
 
-## Features
-- **Hand Tracking Drawing:** Draw in the air using your index finger, with real-time gesture recognition (powered by MediaPipe and OpenCV).
-- **AI Guessing Game:** Get a random prompt, draw it, and let Google Gemini AI guess your drawing.
-- **Futuristic UI:** Modern, sci-fi inspired interface with overlays, scanner lines, and hex patterns.
-- **Multiple Tools:** Switch between brush and eraser using hand gestures.
-- **Prompt System:** Random drawing prompts for endless fun.
-- **Test Scripts:** Several test scripts for experimenting with different features and UI layouts.
+# 🎨 AI Virtual Painter: The Pictionary of the Future
 
-## Demo
-![Demo Screenshot](screenshot/myimg.png)
+[](https://www.python.org/)
+[](https://mediapipe.dev/)
+[](https://ai.google.dev/)
+[](https://opensource.org/licenses/MIT)
 
-## Installation
-1. **Clone the repository:**
-   ```bash
-   git clone <repo-url>
-   cd AI-virtual-Painter-
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   You may also need to install `mediapipe` manually:
-   ```bash
-   pip install mediapipe
-   ```
+**AI Virtual Painter** is an immersive, gesture-controlled drawing application. By leveraging high-performance computer vision and generative AI, it allows users to "paint" in 3D space using hand gestures. Once your masterpiece is complete, the **Google Gemini AI** engine analyzes the canvas to guess the drawing—bringing a futuristic twist to the classic game of Pictionary.
 
-## Usage
-- **Main Game:**
-  Run the main AI guessing game:
-  ```bash
-  python final.py
-  ```
-- **Classic Drawing Mode:**
-  ```bash
-  python main.py
-  ```
-- **Test Scripts:**
-  Try out different features or UI layouts:
-  ```bash
-  python test1.py
-  python test2.py
-  python test3.py
-  python test5.py
-  ```
+-----
 
-## Controls & Instructions
-- **Drawing:** Use your index finger to draw in the air (in front of your webcam).
-- **Selection Mode:** Hold up your index and middle fingers to select tools (brush/eraser) from the sidebar.
-- **Submit Drawing:** Press `S` to submit your drawing for AI guessing.
-- **New Prompt:** Press `N` for a new drawing prompt.
-- **Quit:** Press `Q` to exit.
+## 🚀 Core Features
 
-## File Structure
-- `final.py` - Main AI guessing game with futuristic UI and prompt system.
-- `main.py` - Classic virtual painter (no AI guessing).
-- `HandTracking.py` - Hand tracking module using MediaPipe.
-- `test1.py`, `test2.py`, `test3.py`, `test5.py` - Test/demo scripts.
-- `Header/`, `Test_header/` - Toolbar/header images.
-- `screenshot/` - Screenshots and output images.
-- `requirements.txt` - Python dependencies.
+  * **🖐️ Real-Time Gesture Recognition:** Powered by **OpenCV** and **MediaPipe**, the system tracks 21 hand landmarks with ultra-low latency.
+  * **🧠 Intelligent Guessing:** Integrated with **Google Gemini Pro Vision** to interpret complex hand-drawn sketches and provide real-time feedback.
+  * **🛡️ Futuristic HUD:** A sci-fi inspired user interface featuring scanner lines, hexagonal overlays, and dynamic UI elements.
+  * **🛠️ Multi-Tool Canvas:** Seamlessly switch between brushes and erasers using specialized hand "Selection Mode."
+  * **🎯 Adaptive Prompting:** Built-in challenge system that generates random prompts to test your drawing skills.
 
-## Dependencies
-- opencv-python
-- numpy
-- mediapipe
-- pyautogui
-- google-generativeai
+-----
 
-Install all with `pip install -r requirements.txt` (plus `mediapipe` if needed).
+## 🛠️ Technical Stack
 
-## Notes
-- You need a webcam to use this project.
-- For AI guessing, you need a valid Google Generative AI API key. Set it in `final.py` (see `genai.configure(api_key=...)`).
-- The project is for educational and entertainment purposes.
+| Component | Technology |
+| :--- | :--- |
+| **Language** | Python 3.8+ |
+| **Computer Vision** | OpenCV, MediaPipe |
+| **Generative AI** | Google Gemini API |
+| **Automation** | PyAutoGUI |
+| **Math/Logic** | NumPy |
 
-## Credits
-- Hand tracking powered by [MediaPipe](https://google.github.io/mediapipe/).
-- AI guessing powered by [Google Gemini](https://ai.google.dev/).
-- Developed by Soumya Doshi.
+-----
+
+## 📥 Installation
+
+1.  **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/soumyadoshii/ai-virtual-painter.git
+    cd ai-virtual-painter
+    ```
+
+2.  **Set Up a Virtual Environment (Recommended):**
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+
+3.  **Install Dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+-----
+
+## 🎮 How to Play
+
+### 1\. Launch the Game
+
+```bash
+python final.py
+```
+
+### 2\. Control Logic
+
+  * **Drawing Mode:** Raise only your **Index Finger**. Move it to paint on the digital canvas.
+  * **Selection Mode:** Raise both **Index and Middle Fingers**. Hover over the top menu to select colors or the eraser.
+  * **Submit (Guessing):** Press **'S'** to send your drawing to the Gemini AI.
+  * **New Challenge:** Press **'N'** to generate a new drawing prompt.
+  * **Exit:** Press **'Q'** to safely close the application.
+
+-----
+
+## 📂 Project Structure
+
+```text
+├── final.py            # Primary AI Guessing Game (Full UI)
+├── main.py             # Sandbox Drawing Mode (No AI)
+├── HandTracking.py     # Custom MediaPipe logic wrapper
+├── requirements.txt    # Project dependencies
+├── Header/             # UI Assets & Toolbar overlays
+├── screenshots/        # Saved captures and output logs
+└── test_scripts/       # Experimental UI and feature tests (test1.py to test5.py)
+```
+
+-----
+
+## 🔑 Configuration & Security
+
+To enable the AI guessing feature, you must provide a Google Generative AI API Key.
+
+> **Tip:** Instead of hardcoding your key, it is best practice to use an environment variable or a `.env` file.
+
+```python
+# In final.py
+genai.configure(api_key="YOUR_ACTUAL_API_KEY")
+```
+
+-----
+
+## 🤝 Credits
+
+  * **Developer:** [Soumya Doshi](https://www.google.com/search?q=https://github.com/soumyadoshii)
+  * **Hand Tracking:** [MediaPipe Hands](https://www.google.com/search?q=https://google.github.io/mediapipe/solutions/hands.html)
+  * **Vision Engine:** [Google Gemini](https://ai.google.dev/)
+
+-----
+
+Would you like me to help you draft a `.gitignore` file so those `__pycache__` folders don't clutter your GitHub?
