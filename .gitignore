@@ -1,0 +1,59 @@
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Virtual Environments ---
+venv/
+env/
+ENV/
+bin/
+include/
+lib/
+scripts/
+pyvenv.cfg
+.venv/
+
+# --- Environment Variables / Secrets ---
+# Crucial for hiding your Gemini API Key
+.env
+.flaskenv
+secrets.json
+
+# --- IDE & Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Project Specifics ---
+# Exclude temporary screenshots/outputs if you don't want them on GitHub
+screenshots/*.jpg
+screenshots/*.png
+screenshot/*.jpg
+screenshot/*.png
+# If you want to keep the folder but not the files inside:
+# !screenshots/.gitkeep
+
+# --- OS Specific ---
+Thumbs.db
+desktop.ini
